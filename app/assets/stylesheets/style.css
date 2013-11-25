@@ -1,7 +1,51 @@
+@font-face {
+  font-family: 'Moolah';
+  src: url('../Moolah.ttf');
+}
+
+@font-face {
+  font-family: 'AngillaTattoo';
+  src: url('../AngillaTattoo.ttf');
+}
+
+@font-face {
+  font-family: 'Chunkfive';
+  src: url('../Chunkfive.otf');
+}
+
 body {
   background: lightgrey;
 }
 
-#user_nav {
+h1 {
+  font-size: 80px;
+  font-family: Moolah;
+  display: inline;
+}
+h2 {
+  font-size: 80px;
+  font-family: AngillaTattoo;
+  display: inline;
+}
+
+h3 {
+  color: #575757;
+  font-size: 50px;
+  font-family: Chunkfive;
+
+}
+h4 {
+  color: #575757;
+  font-size: 40px;
+  font-family: Chunkfive;
+}
+
+h5 {
+  font-size: 100px;
+}
+#user_nave {
   text-align: center;
+}
+#logout {
+  text-align: right;
 }
