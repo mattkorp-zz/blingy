@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BlingBlingApp</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+    <% end %>
+    <div id="user_nav">
+      <% if current_user %>
+        Logged in as <strong><%= current_user.email %></strong>.
+        <%= link_to "Logout", logout_path %>
+      <% else %>
+
+        <%= form_for @user, method: :post do |f| %>
+          <%= f.email_field :email, :placeholder => 'email..' %>
+
+          <%= f.password_field :password, :placeholder => 'password..' %>
+
+          <%= f.password_field :password_confirmation, :placeholder => 'confirm your password' %>
+
+          <%= f.submit "Sign up" %>
+        <% end %>
+
+        <%= form_tag('/login') do %>
+          <%= email_field_tag :email, nil, :placeholder => 'email..' %>
+
+          <%= password_field_tag :password, nil, :placeholder => 'password..' %>
+
+          <%= submit_tag "Check your bling" %>
+        <% end %>
+
+      <% end %>
+      <center><h1><font color="green">Bling Bling Bank</font> <font color="gold">$$</font></h1></center>
+    </div>
+  </div>
+
+<%= yield %>
+
+</body>
+</html>
