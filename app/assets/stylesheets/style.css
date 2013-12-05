@@ -1,3 +1,14 @@
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; } 50% { opacity: 0.0; } 100% { opacity: 1.0; }
+}
+
+.blink {
+  -webkit-animation-name: blink;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps(1);
+  -webkit-animation-duration: 1s;
+}
+
 @font-face {
   font-family: 'Moolah';
   src: url('../Moolah.ttf');
