@@ -1,4 +1,4 @@
-TODO make this super cool app
+TODO wire monies
 
 user
 -email
